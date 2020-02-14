@@ -1,0 +1,56 @@
+
+<div class="text-right">
+    <button class="btn btn-primary justify-content-end" >Cart({{cartCount}})</button>
+</div>
+<br>
+<div class="card">
+    <div class="card-body">        
+    <button class="btn btn-success float-left" (click)="increasePrice()">&nbsp; + &nbsp;</button>
+    <button class="btn btn-danger float-right" (click)="decreasePrice()">&nbsp; - &nbsp;</button>
+    </div>
+</div>
+<div class="row" *ngNotIf="showPriceInput">
+    This is NgNotIf test
+    <div class="col">
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+        </div>
+        <input type="text" validateInput class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+<div class="card-body" *ngFor="let singleDish of menu; index as i">
+    <!-- <button class="btn btn-primary" (click)="myDishTemRef.changeName()">Change Me!</button>
+    {{myDishTemRef.myDishHere.price}} -->
+         <menu-dish [myDishHere] = "singleDish" #myDishTemRef
+             [index]="i" [priceDifference]="priceDifference"
+          (addedToCart)="handleTheEmit($event)">
+            <!-- {{i + 1}} Test -->
+         </menu-dish>
+</div>
+</div>
+
+
+
+
+<!--Dish : {{mintexDish.name}}-->
+
+
+
+<!--Sum of 1 + 1 = {{1 + 1}}
+<br>
+Speed : <input name="speed" type="number" [value]="inputValue"> <br>
+<!--accelerate By : <input type="number" [ngModel]="increaseByValue" 
+(ngModelChange)="handleChange($event)">-->
+
+<!--accelerate By : <input type="number" [(ngModel)]="increaseByValue">
+<br>
+
+<button (click)="accelrate()">Accelarate</button>-->
+
+<!--<menu-dish></menu-dish>-->

@@ -1,0 +1,42 @@
+<!-- <br>
+<div class="card">
+    <div class="card-body">
+        <ads-smart-comp></ads-smart-comp>
+    </div>
+
+</div>
+<br>
+<menu-smart-comp></menu-smart-comp> -->
+<!-- <app-books-root></app-books-root>
+
+<div class="footer">
+    @copyright Mintex tech {{now | date : 'MM-dd-yyyy hh:mm:ss a'}}
+</div> -->
+
+<div class="card">
+    <div class="card-header" *ngIf="checkIfLoggedIn()">
+        <app-navigation></app-navigation>
+    </div>
+    <div class="card-body">
+        <!-- <app-login></app-login> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> -->
+        <!-- <app-books-root></app-books-root> -->
+        <!-- <app-sign-up>Loading.........</app-sign-up> -->
+        <!-- <app-sign-up-reactive></app-sign-up-reactive> -->
+        <!-- {{getvalue()}} -->
+        <router-outlet>
+                <div class="d-flex align-items-center">
+                <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+                </div>
+
+
+        </router-outlet>
+    </div>
+    <div class="card-footer text-muted">
+            @copyright Mintex tech {{now | date : 'MM-dd-yyyy hh:mm:ss a'}}
+    </div>
+</div>
